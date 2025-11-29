@@ -16,6 +16,12 @@ const giftsApi = createApi({
             //query endpoint
             //queries run immediately
             fetchGifts: builder.query({
+                providesTags: (result, error, gift) => {
+                    const tags = result.map((gift) => {
+                        return { type: "Gift", id: gift.id };
+                    });
+                    return tags;
+                },
                 query: () => {
                     return {
                        url: '/gifts',
@@ -40,8 +46,9 @@ const giftsApi = createApi({
             }),
             //remove gift mutation
             removeGift: builder.mutation({
-                invalidateTags: (results, error, {gift}) => {
+                invalidatesTags: (results, error, gift) => {
                     console.log(gift)
+                    return [{ type: 'Gift', id: gift.id }];
                 },
                 query: (gift) => {
                     return {
