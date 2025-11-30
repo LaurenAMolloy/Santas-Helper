@@ -6,11 +6,24 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 //delete
 //surpriseGift - faker.js
 
+//Add a delay to test skeleton
+const pause = (delay) => {
+    return new Promise((resolve) => {
+        setTimeout(resolve, delay)
+    });
+}
+
 const giftsApi = createApi({
     reducerPath: 'gifts',
     baseQuery: fetchBaseQuery({
         baseUrl: 'http://localhost:3005',
+         //Remove for production
+         fetchFn: async (...args) => {
+         await pause(3000);
+         return fetch(...args);
+        }, 
     }),
+
     endpoints(builder) {
         return {
             //query endpoint
