@@ -1,10 +1,9 @@
 import { useFetchGiftsQuery } from "../store"
 import GiftListItem from '../components/GiftListItem'
+import Totals from "./Totals";
 
 export default function GiftList() {
   const { data, isLoading, error } = useFetchGiftsQuery();
-
-
   console.log(data);
 
   let content 
@@ -18,6 +17,7 @@ export default function GiftList() {
       <div className="flex flex-col gap-2">
         {content}
       </div>
+      <Totals />
     </div>
   )
 }

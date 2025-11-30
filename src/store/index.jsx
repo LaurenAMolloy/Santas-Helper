@@ -19,5 +19,5 @@ export const store = configureStore({
 //automatic refreshes
 setupListeners(store.dispatch)
 
-export { useFetchGiftsQuery, useAddGiftMutation, useRemoveGiftMutation } from './api/giftsApi';
+export { useFetchGiftsQuery, useAddGiftMutation, useRemoveGiftMutation, useTogglePurchasedMutation } from './api/giftsApi';
 

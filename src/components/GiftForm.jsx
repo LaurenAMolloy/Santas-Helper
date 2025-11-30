@@ -6,12 +6,12 @@ export default function GiftForm() {
   const[addGift, results] = useAddGiftMutation();
 
   //Local state for form
-  const[gift, setGift] = useState("");
+  const[name, setName] = useState("");
   const[price, setPrice] = useState("");
   const[purchased, setPurchased] = useState(false);
 
   const handleGiftChange = (e) => {
-    setGift(e.target.value)
+    setName(e.target.value)
   }
 
   const handlePriceChange = (e) => {
@@ -26,19 +26,20 @@ export default function GiftForm() {
   const handleSubmit = (e) => {
   e.preventDefault();
   const newGift = {
-    gift,
+    name,
     price,
     purchased,
   }
+  console.log(newGift)
   //trigger network request
   addGift(newGift);
   //reset form to empty string
-  setGift("");
+  setName("");
   setPrice("");
   setPurchased(false);
   }
 
-  const isDisabled = !gift || !price;
+  const isDisabled = !name || !price;
 
   //add button class for disabled here
   const buttonClass = "bg-slate-700 text-white p-2 border-none rounded w-2/5 cursor-pointer" + (isDisabled ? " opacity-50 cursor-not-allowed" : " opacity-100")
@@ -47,8 +48,15 @@ export default function GiftForm() {
     <div className="w-full flex flex-col justify-center items-center py-5">
       <h1>Add Items to the Gift List</h1>
       <form className="flex flex-col gap-2 border-2 border-slate-600 p-4 rounded w-2/3" onSubmit={handleSubmit}>
-          <label htmlFor="gift">Gift</label>
-          <input className="border-2 border-slate-400" onChange={handleGiftChange} value={gift} type="text" placeholder="Enter gift" id="gift"></input>
+          <label htmlFor="name">Gift</label>
+          <input 
+          className="border-2 border-slate-400" 
+          onChange={handleGiftChange} 
+          value={name} 
+          type="text" 
+          placeholder="Enter gift" 
+          id="name">
+          </input>
           <label htmlFor="price">Price</label>
           <input className="border-2 border-slate-400" onChange={handlePriceChange} value={price} type="number" placeholder="Enter price" id="price"></input>
           <legend>Purchased yet?</legend>

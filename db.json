@@ -1,51 +1,15 @@
 {
   "gifts": [
     {
-      "id": "1",
-      "name": "Barbie",
-      "price": 25,
-      "purchased": false
-    },
-    {
-      "id": "2",
-      "name": "Lego",
-      "price": 50,
-      "purchased": false
-    },
-    {
-      "id": "d666",
+      "id": "450d",
       "name": "Markers",
-      "price": "25"
+      "price": "15",
+      "purchased": true
     },
     {
-      "id": "c6d4",
-      "name": "Markers",
-      "price": "25"
-    },
-    {
-      "id": "e580",
-      "name": "Markers",
-      "price": "25"
-    },
-    {
-      "id": "1556",
-      "name": "Markers",
-      "price": "25"
-    },
-    {
-      "id": "e48c",
-      "name": "Markers",
-      "price": "25"
-    },
-    {
-      "id": "328d",
-      "name": "Markers ",
-      "price": "25"
-    },
-    {
-      "id": "e26c",
-      "name": "Markers",
-      "price": "25",
+      "id": "4256",
+      "name": "Teddy",
+      "price": "20",
       "purchased": true
     }
   ]
