@@ -16,8 +16,8 @@ export default function GiftList() {
 
   return (
     <div className="w-full flex flex-col justify-center items-center py-3 pt-3">
-      <h2>Gift List</h2>
-      <div className="flex flex-col gap-2">
+      <h2 className="font-bold pb-2">Gift List</h2>
+      <div className="flex flex-col gap-2 w-2/3">
         {content}
       </div>
       <Totals />

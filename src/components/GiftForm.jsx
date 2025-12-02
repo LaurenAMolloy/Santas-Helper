@@ -46,7 +46,7 @@ export default function GiftForm() {
 
   return (
     <div className="w-full flex flex-col justify-center items-center py-5">
-      <h1>Add Items to the Gift List</h1>
+      <h1 className="font-bold pb-2">Add Items to the Gift List</h1>
       <form className="flex flex-col gap-2 border-2 border-slate-600 p-4 rounded w-2/3" onSubmit={handleSubmit}>
           <label htmlFor="name">Gift</label>
           <input 

@@ -31,10 +31,9 @@ export default function Totals() {
         <h3>Still left to buy:<span></span></h3>
       </div>
     </>
-    if(isLoading){
-      content = <div>Loading...</div>
+    } else if(isLoading){
+      content = <p>Loading...</p>
     }
-  }
 
   return (
     <div className='text-center w-2/3 mt-5'>
