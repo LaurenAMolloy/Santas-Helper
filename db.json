@@ -4,12 +4,24 @@
       "id": "450d",
       "name": "Markers",
       "price": "15",
-      "purchased": true
+      "purchased": false
     },
     {
       "id": "4256",
       "name": "Teddy",
       "price": "20",
+      "purchased": true
+    },
+    {
+      "id": "863e",
+      "name": "Barbie",
+      "price": "30",
+      "purchased": true
+    },
+    {
+      "id": "dbdc",
+      "name": "Trainers",
+      "price": "30",
       "purchased": true
     }
   ]
